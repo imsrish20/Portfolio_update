@@ -1,7 +1,5 @@
-"use client";
 import React, { Fragment, useState, useEffect, useRef } from "react";
 import { FaLaptopCode } from "react-icons/fa";
-
 import { TechStackData } from "@/constants/SkillsData";
 
 const TechStack = () => {
@@ -52,21 +50,21 @@ const TechStack = () => {
   return (
     <Fragment>
       <section
-        className='shadow-zinc-300 dark:shadow-zinc-700 shadow-sm overflow-hidden'
-        id='techStack'
+        className="shadow-zinc-300 dark:shadow-zinc-700 shadow-sm overflow-hidden"
+        id="techStack"
         ref={techStackRef}
       >
-        <h2 className='text-3xl font-bold text-center p-4 flex justify-center items-center gap-3'>
+        <h2 className="text-3xl font-bold text-center p-4 flex justify-center items-center gap-3">
           <FaLaptopCode /> Tech Stack
         </h2>
 
         <div
-          className='pop-down transition-all w-fit duration-500 m-auto rounded-lg border border-black dark:border-white border-solid overflow-hidden'
+          className="pop-down transition-all w-fit duration-500 m-auto rounded-lg border border-black dark:border-white border-solid overflow-hidden"
           ref={buttonsRef}
         >
           <button
             className={`w-[120px] md:w-[150px] p-2 font-bold ${
-              section === "Advance" ? "bg-red-600" : null
+              section === "Advance" ? "bg-[#3dc444]" : null
             } transition-all`}
             onClick={(e) => {
               setSection(e.target.innerText);
@@ -78,7 +76,7 @@ const TechStack = () => {
           </button>
           <button
             className={`w-[120px] md:w-[150px] p-2 font-bold ${
-              section === "Good" ? "bg-red-600" : null
+              section === "Good" ? "bg-[#3dc4a5]" : null
             } transition-all border-l border-r border-black dark:border-white border-solid`}
             onClick={(e) => {
               setSection(e.target.innerText);
@@ -90,7 +88,7 @@ const TechStack = () => {
           </button>
           <button
             className={`w-[100px] md:w-[150px] p-2 font-bold ${
-              section === "Familiar" ? "bg-red-600" : null
+              section === "Familiar" ? "bg-[#3d87c4]" : null
             } transition-all`}
             onClick={(e) => {
               setSection(e.target.innerText);
@@ -103,13 +101,28 @@ const TechStack = () => {
         </div>
 
         <div
-          className='pop-down-child flex min-h-[450px] py-[30px] px-[20px] md:px-[100px] flex-wrap justify-center items-center gap-5'
+          className="pop-down-child flex min-h-[450px] py-[30px] px-[20px] md:px-[100px] flex-wrap justify-center items-center gap-5"
           ref={techBoxesRef}
         >
-          {sectionData.map((tech) => (
+          {sectionData.map((tech, index) => (
             <div
-              className='transition-all duration-700 px-2 h-fit py-3 md:py-5 w-[120px] md:w-[150px] border border-black dark:border-white border-solid rounded flex flex-col gap-3 items-center'
+              className="transition-all duration-700 px-2 h-fit py-3 md:py-5 w-[120px] md:w-[150px] border border-black dark:border-white border-solid rounded flex flex-col gap-3 items-center"
               key={tech.name}
+              style={{
+                boxShadow: `0 0 10px 0 rgba(0, 0, 0, 0.1)`,
+                transition: "box-shadow 0.1s ease-in-out",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow =
+                  index % 2 === 0
+                    ? "0 0 5px 5px #952ffa" // Purple glow
+                    : "0 0 10px 5px #facc15"; // Yellow glow
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 0 10px 0 rgba(0, 0, 0,0.1)";
+              }}
             >
               <p>{tech.icon}</p>
               <p>{tech.name}</p>

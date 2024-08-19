@@ -1,26 +1,26 @@
 export const EducationData = [
     {
-        name: "Bachelor of Science",
+        name: "Bachelor of Technology",
         image:
             "http://res.cloudinary.com/dhixp5pnk/image/upload/v1696219056/edekjqivqlnsyg8pfmxw.png",
-        schoolOrCollege: "GOVERNMENT COLLEGE, KOTA",
-        fromTo: "2021 - 2022",
-        statusOrPrecentage: "Dropped in second year",
+        schoolOrCollege: "Shri Ramdeobaba College of Engineering",
+        fromTo: "2022 - 2026",
+        statusOrPrecentage: "9.59 CGPA till 4th Sem",
     },
     {
         name: "Senior Secondary Examination",
         image:
             "http://res.cloudinary.com/dhixp5pnk/image/upload/v1696219649/jkjfvdlxjntnyrxs57ia.png",
-        schoolOrCollege: "SWAMI TEONRAM ALOK SR. SEC. SCHOOL DADABARI, KOTA",
-        fromTo: "2021",
-        statusOrPrecentage: "96.80 %",
+        schoolOrCollege: "G.H. Raisoni Vidyaniketan",
+        fromTo: "2022",
+        statusOrPrecentage: "84.60 %",
     },
     {
         name: "Secondary Examination",
         image:
             "http://res.cloudinary.com/dhixp5pnk/image/upload/v1696219649/tnverjapfr4slg7fnfcw.png",
-        schoolOrCollege: "A.V.M. SECONDARY SCHOOL, RAWATBHATA",
-        fromTo: "2019",
-        statusOrPrecentage: "93.33%",
+        schoolOrCollege: "Kendriya Vidyalaya VSN Nagpur",
+        fromTo: "2020",
+        statusOrPrecentage: "91.05 %",
     },
 ];
