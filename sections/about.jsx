@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FaBlackTie, FaUserCheck } from "react-icons/fa";
 import { ImLocation } from "react-icons/im";
 import { IoPerson } from "react-icons/io5";
-import { BsMenuAppFill } from "react-icons/bs";
+import { BsMenuAppFill, BsCircleFill } from "react-icons/bs"; // For bullet points
 
 const About = () => {
   const [isAbout, setIsAbout] = useState(false);
@@ -45,11 +45,11 @@ const About = () => {
   return (
     <Fragment>
       <section
-        className="shadow-zinc-300 dark:shadow-zinc-700 shadow-sm overflow-x-hidden"
+        className="bg-[#050d2e] shadow-zinc-300 dark:shadow-zinc-700 shadow-sm overflow-x-hidden"
         id="about"
         ref={aboutRef}
       >
-        <h2 className="text-3xl font-bold text-center pt-4 pb-8 flex justify-center items-center gap-3">
+        <h2 className="text-3xl font-bold text-center pt-4 pb-8 flex justify-center items-center gap-3 text-white">
           <FaUserCheck /> Know me ?
         </h2>
         <div className="pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] md:flex gap-[50px]">
@@ -69,90 +69,120 @@ const About = () => {
             ref={aboutInfoRef}
           >
             {/* Full Name */}
-            <p className="text-3xl text-center md:text-left font-semibold text-[#c72c6c] dark:text-[#8e34e3]">
+            <p className="text-3xl text-center md:text-left font-semibold text-[#5f98ed]">
               Srishti Mangalam
             </p>
             {/* Profile Name */}
-            <p className="text-center md:text-left text-[#ebaf38] mt-1">
+            <p className="text-center md:text-left text-[#f08b86] mt-1">
               Full stack web developer & Data Analyst
             </p>
-            <p className="text-center md:text-left text-[#8e34e3] mt-1 text-[12px] md:text-[14px] lg:text-[14px]">
-  B-Tech in Computer Science and Engineering specialized in Data Science
-</p>
+            <p className="text-center md:text-left text-[#5f98ed] mt-1 text-[12px] md:text-[14px] lg:text-[14px]">
+              B-Tech in Computer Science and Engineering specialized in Data
+              Science
+            </p>
 
-
-            {/* Location, Age, Experience, Projects */}
+            {/* Location, Age, Projects */}
             <div className="flex flex-wrap justify-center md:justify-start gap-5">
-              <div className="w-fit px-3 py-1 mt-4 border border-gray-400 rounded flex flex-col items-center gap-1">
+              <div className="w-fit px-5 py-3 mt-4 border-2 border-[#ebaf38] rounded-lg shadow-md bg-[#0b0c0c] flex flex-col items-center gap-1">
                 <div className="flex gap-2 items-center">
-                  <p className="text-center md:text-left text-[#c72c6c] dark:text-[#ebaf38] text-sm">
+                  <p className="text-center md:text-left text-[#5f98ed] text-sm">
                     Location
                   </p>
                   <p>
                     <ImLocation />
                   </p>
                 </div>
-                <p className="text-center md:text-left text-[#0b0c0c] dark:text-[#ebaf38] text-xs">
+                <p className="text-center md:text-left text-[#f08b86] text-xs">
                   Nagpur, Maharashtra, India
                 </p>
               </div>
               {/* Age */}
-              <div className="w-fit px-3 py-1 mt-4 border border-gray-400 rounded flex flex-col items-center gap-1">
+              <div className="w-fit px-5 py-3 mt-4 border-2 border-[#ebaf38] rounded-lg shadow-md bg-[#0b0c0c] flex flex-col items-center gap-1">
                 <div className="flex gap-2 items-center">
-                  <p className="text-center md:text-left text-[#c72c6c] dark:text-[#ebaf38] text-sm">
+                  <p className="text-center md:text-left text-[#f08b86] text-sm">
                     Age
                   </p>
                   <p>
                     <IoPerson />
                   </p>
                 </div>
-                <p className="text-center md:text-left text-[#c72c6c] dark:text-[#ebaf38] text-xs">
+                <p className="text-center md:text-left text-[#5f98ed] text-xs">
                   20
                 </p>
               </div>
-              {/* Experience */}
-              {/* <div className='w-fit px-3 py-1 mt-4 border border-gray-400 rounded flex flex-col items-center gap-1'>
-                <div className='flex gap-2 items-center'>
-                  <p className='text-center md:text-left text-[#c72c6c] dark:text-[#8e34e3] text-sm'>
-                    Experience
-                  </p>
-                  <p>
-                    <FaBlackTie />
-                  </p>
-                </div>
-                <p className='text-center md:text-left text-[#c72c6c] dark:text-[#8e34e3] text-xs'>
-                  1 Year
-                </p>
-              </div> */}
               {/* Projects */}
-              <div className="w-fit px-3 py-1 mt-4 border border-gray-400 rounded flex flex-col items-center gap-1">
+              <div className="w-fit px-5 py-3 mt-4 border-2 border-[#ebaf38] rounded-lg shadow-md bg-[#0b0c0c] flex flex-col items-center gap-1">
                 <div className="flex gap-2 items-center">
-                  <p className="text-center md:text-left text-[#c72c6c] dark:text-[#ebaf38] text-sm">
+                  <p className="text-center md:text-left text-[#5f98ed] text-sm">
                     Projects
                   </p>
                   <p>
                     <BsMenuAppFill />
                   </p>
                 </div>
-                <p className="text-center md:text-left text-[#c72c6c] dark:text-[#ebaf38] text-xs">
+                <p className="text-center md:text-left text-[#f08b86] text-xs">
                   3
                 </p>
               </div>
             </div>
 
-            <div className="mt-5 justify-evenly text-justify">
-              <p className="text-gray-600 dark:text-gray-300">
-                A passionate and driven ReactJS developer with a strong
-                foundation in the MERN Stack, NextJS, and a keen interest in
-                data science. I am dedicated to creating dynamic, user-centric
-                web applications while integrating data-driven insights for
-                enhanced user experiences. With expertise in frontend
-                frameworks, modern UI/UX design, responsive development, and
-                data analysis, I am eager to contribute to a forward-thinking
-                team. My goal is to continuously learn and grow in the
-                ever-evolving fields of web development and data science,
-                leveraging both to deliver innovative solutions.
+            {/* Updated Text with Spacing and Correct Bullet Sizes */}
+            <div className="mt-5 text-justify space-y-4">
+              <p className="text-xl font-semibold text-gray-300 mt-6">
+                Core Competencies
               </p>
+              <ul className="text-gray-300 space-y-3 pl-6">
+                <li className="flex items-start">
+                  <BsCircleFill
+                    className="text-[#5f98ed] mr-3"
+                    style={{ fontSize: "0.75rem" }}
+                  />{" "}
+                  Dedicated to creating dynamic, user-centric web applications.
+                </li>
+                <li className="flex items-start">
+                  <BsCircleFill
+                    className="text-[#f08b86] mr-3"
+                    style={{ fontSize: "0.75rem" }}
+                  />{" "}
+                  Integrates data-driven insights for enhanced user experiences.
+                </li>
+                <li className="flex items-start">
+                  <BsCircleFill
+                    className="text-[#f08b86] mr-3"
+                    style={{ fontSize: "0.75rem" }}
+                  />{" "}
+                  Expertise in frontend frameworks, modern UI/UX design, and
+                  responsive development.
+                </li>
+              </ul>
+
+              <p className="text-xl font-semibold text-gray-300 mt-6">
+                Professional Aspirations
+              </p>
+              <ul className="text-gray-300 space-y-3 pl-6">
+                <li className="flex items-start">
+                  <BsCircleFill
+                    className="text-[#5f98ed] mr-3"
+                    style={{ fontSize: "0.75rem" }}
+                  />{" "}
+                  Eager to contribute to a forward-thinking team.
+                </li>
+                <li className="flex items-start">
+                  <BsCircleFill
+                    className="text-[#f08b86] mr-3"
+                    style={{ fontSize: "0.75rem" }}
+                  />{" "}
+                  Committed to continuous learning and growth in web development
+                  and data science.
+                </li>
+                <li className="flex items-start">
+                  <BsCircleFill
+                    className="text-[#5f98ed] mr-3"
+                    style={{ fontSize: "0.75rem" }}
+                  />{" "}
+                  Aims to leverage both fields to deliver innovative solutions.
+                </li>
+              </ul>
             </div>
           </div>
         </div>

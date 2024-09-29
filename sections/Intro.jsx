@@ -2,7 +2,7 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { Typewriter } from "react-simple-typewriter"; // Correct import
+import { Typewriter } from "react-simple-typewriter";
 import { LinearGradient } from "react-text-gradients";
 
 const Intro = () => {
@@ -12,14 +12,12 @@ const Intro = () => {
   const introRef = useRef();
   const profileRef = useRef();
 
-  // Intersection observer animation on scroll
   useEffect(() => {
     const getScreenWidth = () =>
       window.innerWidth ||
       document.documentElement.clientWidth ||
       document.body.clientWidth;
 
-    // Scroll Animation
     if (homeRef.current) {
       const homeObserver = new IntersectionObserver(
         ([homeEntry]) => {
@@ -51,7 +49,19 @@ const Intro = () => {
       <Head>
         <title>Srish&apos;s Portfolio</title>
       </Head>
-      <section id="home">
+      <section id="home" className="relative">
+        <video
+          src="/bg.mp4"
+          autoPlay
+          muted
+          loop
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* <img
+          src="/animation-unscreen (1).gif" // Replace with the path to your GIF
+          alt="Decorative GIF"
+          className="absolute bottom-0 right-0 w-50 h-50 object-contain"
+        /> */}
         <div
           className="min-h-[100vh] overflow-x-hidden px-[20px] md:px-[200px] lg:px-[200px] pt-[80px] md:pt-0 md:flex items-center justify-between shadow-zinc-300 dark:shadow-zinc-700 shadow-sm"
           ref={homeRef}
@@ -68,17 +78,17 @@ const Intro = () => {
               Hi There!
             </p>
             <p className="text-2xl md:text-4xl py-2 font-semibold font-sans">
-              <LinearGradient gradient={["to right", "#f9f7fa,#d1a5fa "]}>
+              <LinearGradient gradient={["to right", "#ffffff,#f08c86"]}>
                 I&apos;m a full stack
               </LinearGradient>
-              <span style={{ color: "#862cc7", darkColor: "#6808c2" }}>
+              <span style={{ color: "#f7827c", darkColor: "#f7827c" }}>
                 {" "}
                 developer <span style={{ color: "white" }}></span>
               </span>
             </p>
             <p className="text-2xl md:text-4xl py-2 font-semibold font-sans flex items-center">
               I am into&nbsp;
-              <LinearGradient gradient={["to right", "#f9f7fa,#d1a5fa ,#6808c2"]}>
+              <LinearGradient gradient={["to right", "#f9f7fa,#7aa7eb ,#7aa7eb"]}>
                 <Typewriter
                   words={[
                     "Designing",
@@ -114,24 +124,23 @@ const Intro = () => {
           </div>
 
           <div
-  ref={profileRef}
-  style={{
-    transform: "translateX(500px)",
-    opacity: 0,
-    transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
-    width: "100%", // Responsive width
-    maxWidth: "400px", // Maximum width for large screens
-    height: "100%", // Responsive height
-    maxHeight: "500px", // Maximum height
-    backgroundSize: "contain", // Ensure the entire image fits within the div
-    backgroundImage: "url(/images/me.jpg)", // Ensure this path is correct
-    backgroundPosition: "center", // Center the image
-    backgroundRepeat: "no-repeat", // Prevent repeating the image
-    margin: "auto",
-    marginTop: "100px",
-  }}
-/>
-
+            ref={profileRef}
+            style={{
+              transform: "translateX(500px)",
+              opacity: 0,
+              transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
+              width: "100%",
+              maxWidth: "400px",
+              height: "100%",
+              maxHeight: "500px",
+              backgroundSize: "contain",
+              backgroundImage: "url(/images/me.jpg)",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              margin: "auto",
+              marginTop: "100px",
+            }}
+          />
         </div>
       </section>
     </Fragment>

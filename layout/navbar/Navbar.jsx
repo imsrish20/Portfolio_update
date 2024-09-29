@@ -44,38 +44,39 @@ const Navbar = () => {
     <Fragment>
       {/* Desktop Header */}
       <div
-        className='w-full h-[70px] px-8 bg-[rgba(255,255,255,0.8)] dark:bg-[rgba(0,0,0,0.8)] backdrop-filter backdrop-blur-lg hidden md:flex justify-between items-center gap-4 shadow-sm shadow-gray-300 dark:shadow-gray-800 fixed z-10 transition-all duration-500'
-        style={{ top: top }}
-      >
+  className='w-full h-[50px] px-8 bg-[#0d1638] dark:bg-[#050d2e] backdrop-filter backdrop-blur-lg hidden md:flex justify-between items-center gap-4 shadow-sm shadow-gray-300 dark:shadow-gray-800 fixed z-10 transition-all duration-500'
+  style={{ top: top }}
+>
         {/* Name Logo */}
         <p className='text-gray-400 flex'>
-          <span className='text-lg font-bold'>SHIV</span> <DiTechcrunch />
+        {/* <span className='text-[#8e34e3] dark:text-[#8e34e3] font-semibold'>Srish</span> */}
+
         </p>
-        <div className='h-full flex gap-4'>
+        <div className='h-full flex gap-10'>
           {/* Navbar Links */}
           {NavbarMenu.map((navbar) => (
             <Link
-              className={"text-[#8e34e3] dark:text-[#8e34e3] font-semibold"}
+              className={"text-[[#1e6fe8] dark:text-[#5f98ed] font-semibold"}
               href={navbar.link}
               key={navbar.name}
             >
-              <div className='h-full pb-1 hover:pb-0 px-2 flex items-center hover:border-b-4  border-[#8e34e3] dark:border-[#c034e3] transition-all'>
+              <div className='h-full pb-1 hover:pb-0 px-2 flex items-center hover:border-b-4  border-[#f7827c] dark:border-[#f7827c] transition-all'>
                 {navbar.name}
               </div>
             </Link>
           ))}
         </div>
         {/* Toggle Theme button */}
-        <div className='flex items-center gap-4'>
+        <div className='flex items-center gap-2'>
           <button
-            className='text-xl text-[#8e34e3] dark:text-[#dec733] hover:scale-110'
+            className='text-xl text-[#8e34e3] dark:text-[#7aa7eb] hover:scale-110'
             onClick={setThemeFun}
           >
-            {theme === "dark" ? (
+            {/* {theme === "dark" ? (
               <TbBulbFilled />
             ) : (
               <BsFillLightningChargeFill />
-            )}
+            )} */}
           </button>
         </div>
       </div>
