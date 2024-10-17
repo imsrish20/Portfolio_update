@@ -1,10 +1,10 @@
 "use client";
 import React, { Fragment, useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { FaBlackTie, FaUserCheck } from "react-icons/fa";
+import { FaUserCheck } from "react-icons/fa";
 import { ImLocation } from "react-icons/im";
 import { IoPerson } from "react-icons/io5";
-import { BsMenuAppFill, BsCircleFill } from "react-icons/bs"; // For bullet points
+import { BsMenuAppFill } from "react-icons/bs"; // Removed BsCircleFill since we won't be using it
 
 const About = () => {
   const [isAbout, setIsAbout] = useState(false);
@@ -81,105 +81,79 @@ const About = () => {
               Science
             </p>
 
-            {/* Location, Age, Projects */}
             <div className="flex flex-wrap justify-center md:justify-start gap-5">
+              {/* Location */}
               <div className="w-fit px-5 py-3 mt-4 border-2 border-[#ebaf38] rounded-lg shadow-md bg-[#0b0c0c] flex flex-col items-center gap-1">
                 <div className="flex gap-2 items-center">
-                  <p className="text-center md:text-left text-[#5f98ed] text-sm">
+                  <p className="text-center md:text-left text-[#f7827c] text-sm">
                     Location
                   </p>
-                  <p>
+                  <p className="text-[#f7827c]">
                     <ImLocation />
                   </p>
                 </div>
-                <p className="text-center md:text-left text-[#f08b86] text-xs">
+                <p className="text-center md:text-left text-[#f7827c] text-xs">
                   Nagpur, Maharashtra, India
                 </p>
               </div>
+
               {/* Age */}
               <div className="w-fit px-5 py-3 mt-4 border-2 border-[#ebaf38] rounded-lg shadow-md bg-[#0b0c0c] flex flex-col items-center gap-1">
                 <div className="flex gap-2 items-center">
-                  <p className="text-center md:text-left text-[#f08b86] text-sm">
+                  <p className="text-center md:text-left text-[#f7827c] text-sm">
                     Age
                   </p>
-                  <p>
+                  <p className="text-[#f7827c]">
                     <IoPerson />
                   </p>
                 </div>
-                <p className="text-center md:text-left text-[#5f98ed] text-xs">
+                <p className="text-center md:text-left text-[#f7827c] text-xs">
                   20
                 </p>
               </div>
+
               {/* Projects */}
               <div className="w-fit px-5 py-3 mt-4 border-2 border-[#ebaf38] rounded-lg shadow-md bg-[#0b0c0c] flex flex-col items-center gap-1">
                 <div className="flex gap-2 items-center">
-                  <p className="text-center md:text-left text-[#5f98ed] text-sm">
+                  <p className="text-center md:text-left text-[#f7827c] text-sm">
                     Projects
                   </p>
-                  <p>
+                  <p className="text-[#f7827c]">
                     <BsMenuAppFill />
                   </p>
                 </div>
-                <p className="text-center md:text-left text-[#f08b86] text-xs">
+                <p className="text-center md:text-left text-[#f7827c] text-xs">
                   3
                 </p>
               </div>
             </div>
 
-            {/* Updated Text with Spacing and Correct Bullet Sizes */}
+            {/* Updated Text with Custom Bullets */}
             <div className="mt-5 text-justify space-y-4">
               <p className="text-xl font-semibold text-gray-300 mt-6">
                 Core Competencies
               </p>
-              <ul className="text-gray-300 space-y-3 pl-6">
-                <li className="flex items-start">
-                  <BsCircleFill
-                    className="text-[#5f98ed] mr-3"
-                    style={{ fontSize: "0.75rem" }}
-                  />{" "}
+              <ul className="text-gray-300 space-y-3 pl-50 list-none">
+                <li className="flex items-start relative pl-4">
+                  <span className="absolute left-0 top-1/2 transform -translate-y-1/2 text-[#f7827c] text-lg">&#8226;</span>
                   Dedicated to creating dynamic, user-centric web applications.
                 </li>
-                <li className="flex items-start">
-                  <BsCircleFill
-                    className="text-[#f08b86] mr-3"
-                    style={{ fontSize: "0.75rem" }}
-                  />{" "}
+                <li className="flex items-start relative pl-4">
+                  <span className="absolute left-0 top-1/2 transform -translate-y-1/2 text-[#f7827c] text-lg">&#8226;</span>
                   Integrates data-driven insights for enhanced user experiences.
-                </li>
-                <li className="flex items-start">
-                  <BsCircleFill
-                    className="text-[#f08b86] mr-3"
-                    style={{ fontSize: "0.75rem" }}
-                  />{" "}
-                  Expertise in frontend frameworks, modern UI/UX design, and
-                  responsive development.
                 </li>
               </ul>
 
               <p className="text-xl font-semibold text-gray-300 mt-6">
                 Professional Aspirations
               </p>
-              <ul className="text-gray-300 space-y-3 pl-6">
-                <li className="flex items-start">
-                  <BsCircleFill
-                    className="text-[#5f98ed] mr-3"
-                    style={{ fontSize: "0.75rem" }}
-                  />{" "}
+              <ul className="text-gray-300 space-y-3 pl-50 list-none">
+                <li className="flex items-start relative pl-4">
+                  <span className="absolute left-0 top-1/2 transform -translate-y-1/2 text-[#f7827c] text-lg">&#8226;</span>
                   Eager to contribute to a forward-thinking team.
                 </li>
-                <li className="flex items-start">
-                  <BsCircleFill
-                    className="text-[#f08b86] mr-3"
-                    style={{ fontSize: "0.75rem" }}
-                  />{" "}
-                  Committed to continuous learning and growth in web development
-                  and data science.
-                </li>
-                <li className="flex items-start">
-                  <BsCircleFill
-                    className="text-[#5f98ed] mr-3"
-                    style={{ fontSize: "0.75rem" }}
-                  />{" "}
+                <li className="flex items-start relative pl-4">
+                  <span className="absolute left-0 top-1/2 transform -translate-y-1/2 text-[#f7827c] text-lg">&#8226;</span>
                   Aims to leverage both fields to deliver innovative solutions.
                 </li>
               </ul>

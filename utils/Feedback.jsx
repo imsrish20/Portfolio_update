@@ -1,6 +1,5 @@
 import React, { Fragment, useContext, useState } from "react";
 import axios from "axios";
-
 import { PortfolioContext } from "@/contextApi/PortfolioContext";
 
 const Feedback = () => {
@@ -27,7 +26,7 @@ const Feedback = () => {
     } catch (error) {
       setSubmit(false);
       alert(
-        error.response.data.message || error.message || "Some error Accured"
+        error.response.data.message || error.message || "Some error occurred"
       );
     }
   };
@@ -43,12 +42,12 @@ const Feedback = () => {
           className='dark:bg-black bg-[#ccf2f6] z-40 p-4 rounded sm:w-full sm:h-screen md:h-fit md:w-[500px] flex flex-col gap-4'
           onSubmit={submitFeedback}
         >
-          <h3 className='text-center text-2xl font-bold dark:text-[#07d0e5] text-[#c72c6c]'>
+          <h3 className='text-center text-2xl font-bold dark:text-[#f7827c] text-[#c72c6c]'>
             Feedback
           </h3>
           <p>As a developer, you understand the importance of feedback.</p>
           <input
-            className='dark:bg-black border dark:border-[#07d0e5] border-[#c72c6c] p-2 rounded'
+            className='dark:bg-black border dark:border-[#f7827c] border-[#c72c6c] p-2 rounded'
             id='name'
             name='name'
             onChange={collectData}
@@ -56,7 +55,7 @@ const Feedback = () => {
             value={formData.name || ""}
           />
           <input
-            className='dark:bg-black border dark:border-[#07d0e5] border-[#c72c6c] p-2 rounded'
+            className='dark:bg-black border dark:border-[#f7827c] border-[#c72c6c] p-2 rounded'
             id='email'
             name='email'
             onChange={collectData}
@@ -64,7 +63,7 @@ const Feedback = () => {
             value={formData.email || ""}
           />
           <input
-            className='dark:bg-black border dark:border-[#07d0e5] border-[#c72c6c] p-2 rounded'
+            className='dark:bg-black border dark:border-[#f7827c] border-[#c72c6c] p-2 rounded'
             id='rating'
             name='rating'
             onChange={collectData}
@@ -73,7 +72,7 @@ const Feedback = () => {
             value={formData.rating || ""}
           />
           <input
-            className='dark:bg-black border dark:border-[#07d0e5] border-[#c72c6c] p-2 rounded'
+            className='dark:bg-black border dark:border-[#f7827c] border-[#c72c6c] p-2 rounded'
             id='good'
             name='good'
             onChange={collectData}
@@ -81,7 +80,7 @@ const Feedback = () => {
             value={formData.good || ""}
           />
           <input
-            className='dark:bg-black border dark:border-[#07d0e5] border-[#c72c6c] p-2 rounded'
+            className='dark:bg-black border dark:border-[#f7827c] border-[#c72c6c] p-2 rounded'
             id='bad'
             name='bad'
             onChange={collectData}
@@ -89,7 +88,7 @@ const Feedback = () => {
             value={formData.bad || ""}
           />
           <textarea
-            className='dark:bg-black border dark:border-[#07d0e5] border-[#c72c6c] p-2 rounded'
+            className='dark:bg-black border dark:border-[#f7827c] border-[#c72c6c] p-2 rounded'
             id='suggetion'
             name='suggetion'
             onChange={collectData}
@@ -99,7 +98,7 @@ const Feedback = () => {
           />
           <div className='flex justify-between'>
             <button
-              className='font-bold px-4 text-white dark:bg-[#0ab0c2] disabled:cursor-default p-2 rounded dark:hover:bg-[#078795] bg-[#f91071] hover:bg-[#c72c6c]'
+              className='font-bold px-4 text-white bg-[#f7827c] disabled:cursor-default p-2 rounded dark:hover:bg-[#078795] hover:bg-[#c72c6c]'
               onClick={() => {
                 setShowModal(false);
                 setFormData({});
@@ -109,11 +108,11 @@ const Feedback = () => {
               Cancel
             </button>
             <button
-              className='font-bold px-4 text-white dark:bg-[#0ab0c2] disabled:cursor-default p-2 rounded dark:hover:bg-[#078795] bg-[#f91071] hover:bg-[#c72c6c]'
+              className='font-bold px-4 text-white bg-[#f7827c] disabled:cursor-default p-2 rounded dark:hover:bg-[#078795] hover:bg-[#c72c6c]'
               disabled={submit}
               type='submit'
             >
-              {submit ? "Submiting.." : "Submit"}
+              {submit ? "Submitting.." : "Submit"}
             </button>
           </div>
         </form>

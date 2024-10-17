@@ -116,8 +116,8 @@ const TechStack = () => {
               onMouseEnter={(e) => {
                 e.currentTarget.style.boxShadow =
                   index % 2 === 0
-                    ? "0 0 5px 5px #952ffa" // Purple glow
-                    : "0 0 10px 5px #facc15"; // Yellow glow
+                    ? "0 0 5px 5px #5f98ed" // Blue glow
+                    : "0 0 10px 5px #f08b86"; // Red glow
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.boxShadow =
