@@ -36,23 +36,23 @@ const Education = () => {
   return (
     <Fragment>
       <section
-        className="shadow-zinc-300 dark:shadow-zinc-700 shadow-sm overflow-x-hidden"
+        className="shadow-zinc-10 dark:shadow-zinc-30 shadow-sm overflow-x-hidden relative"
         id="education"
         ref={educationRef}
-        // style={{
-        //   backgroundImage: `url('/edubg.png')`, // Add the path to your PNG
-          
-        //  // Ensures the image covers the section
-        //   backgroundPosition: 'center', // Centers the image
-        //   backgroundRepeat: 'no-repeat' // Ensures no repetition of the background image
-        // }}
+        style={{
+          backgroundImage: `url('/edu-bg.png')`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          zIndex: 1, // Set a lower z-index for the background
+        }}
       >
-        <h2 className="text-3xl font-bold text-center p-4 flex justify-center items-center gap-3">
+        <h2 className="text-3xl font-bold text-center p-4 flex justify-center items-center gap-3 relative z-10">
           <IoSchoolSharp /> Education
         </h2>
 
         <div
-          className="pop-down-child pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] flex flex-col gap-[50px]"
+          className="pop-down-child pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] flex flex-col gap-[50px] relative z-20" // Higher z-index for cards
           ref={educationBoxesRef}
         >
           {EducationData.map((education, index) => (
@@ -63,7 +63,8 @@ const Education = () => {
               key={index}
               style={{
                 boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
-                transition: "box-shadow 0.3s ease-in-out"
+                transition: "box-shadow 0.3s ease-in-out",
+                zIndex: 30, // Ensure cards are above background
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.boxShadow =
@@ -79,7 +80,7 @@ const Education = () => {
               {/* Education image - changed to rectangular */}
               <Image
                 alt={education.name}
-                className="w-[450px] h-[150px] object-cover" // Adjusted to rectangular dimensions
+                className="w-[450px] h-[150px] object-cover"
                 height={150}
                 src={education.image}
                 width={450}
