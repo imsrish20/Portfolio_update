@@ -14,5 +14,4 @@ export const ExperienceData = [
     ],
     side: "left",
   },
-  // Add other experience objects here...
 ];
