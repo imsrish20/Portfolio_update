@@ -71,16 +71,16 @@ const Home = () => {
           <SocialMedia />
 
           {/* LatestBlog */}
-          <LatestBlogs />
+          {/* <LatestBlogs /> */}
           {/* Apps */}
-          <Apps />
+          {/* <Apps /> */}
           {/* Send Mail */}
-          <SendMail />
+          {/* <SendMail /> */}
           {/* Footer */}
           <Footer />
           <div className="z-40">
             {/* tawk.to Chat System */}
-            <ChatSystem />
+            {/* <ChatSystem /> */}
           </div>
           {/* Feedback Modal */}
           <Feedback />

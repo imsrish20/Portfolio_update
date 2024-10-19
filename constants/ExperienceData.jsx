@@ -1,20 +1,18 @@
+// Example of ExperienceData
 export const ExperienceData = [
   {
-    companyName: "Good Tech MIND",
-    location: "Kolkata, India",
-    role: "MERN STACK INTERN",
-    fromTo: "Aprile 2023 - June 2023",
-    description:
-      "In this internship, I worked on many projects, including an eCommerce application and a real-time chat system. Through this internship, I gained a strong command of Redux and Redux Toolkit. After completing this internship, I have gained the confidence and skills needed to develop a full-stack application for a real-world eCommerce site.",
+    companyName: "Echilonify",
+    location: "Pune, Maharashtra - Remote",
+    role: "Product Manager and Developer Intern",
+    fromTo: "June 2024 - Ongoing",
+    description: [
+      "Leading a team of 4, managing client communications, gathering requirements, and overseeing the non-technical aspects of product development.",
+      "Handling the technical development of a chatbot creation platform, delivering subscription-based chatbots for integration with WhatsApp, Telegram, and websites.",
+      "Worked on various projects, including an eCommerce application and a real-time chat system.",
+      "Gained a strong command of Redux and Redux Toolkit during the internship.",
+      "Developed the confidence and skills necessary to create a full-stack application for a real-world eCommerce site after completing the internship.",
+    ],
     side: "left",
   },
-  {
-    companyName: "MILLENNIA AHEAD TECHNOLIOIES",
-    location: "Nagpur, India",
-    role: "REACT JS INTERN",
-    fromTo: "December 2022 - March 2023",
-    description:
-      "During this internship, we worked for a startup company to build an online salon appointment booking platform. In my first internship, I learned about version control tools like Git and GitHub. I spent a lot of time improving my skills in building UI and UX to advance my proficiency in CSS styling and JavaScript logic.",
-    side: "right",
-  },
+  // Add other experience objects here...
 ];

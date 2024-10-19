@@ -127,15 +127,15 @@ const Intro = () => {
               </LinearGradient>
             </p>
             <div className="mt-5 md:mt-10 flex gap-3">
-              <Link
+              {/* <Link
                 className="text-white text-xl font-semibold rounded bg-red-400 hover:bg-red-500 px-2 py-1"
                 href={"#getInTouch"}
               >
                 Hire me
-              </Link>
+              </Link> */}
               <Link
                 className="text-xl font-semibold rounded border border-red-500 hover:text-white hover:bg-red-500 px-2 py-1"
-                href="https://drive.google.com/file/d/1uk-tv12y8PK-WrE4oX2xRtmSy4PUVSsE/view"
+                href="https://drive.google.com/file/d/1rb7VvCub6mKzHx-3G2RtCouqXQpEwcu-/view?usp=drivesdk"
                 target="_blank"
               >
                 Download CV
